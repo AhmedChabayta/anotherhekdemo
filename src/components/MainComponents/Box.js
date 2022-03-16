@@ -1,5 +1,5 @@
 import React from "react";
-import { OrbitControls, RoundedBox} from "@react-three/drei";
+import {RoundedBox} from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 
