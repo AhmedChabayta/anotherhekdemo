@@ -1,0 +1,154 @@
+import Navbar from "./components/Navbar";
+import "./globals.css";
+import Arrow from "./assets/arrow.svg";
+import {
+  Header,
+  HeaderTitle,
+  HeaderText,
+  SupportContainer,
+  SupportText,
+} from "./components/StyledElements/HeaderElements.js";
+import {
+  ServicesSection,
+  ServicesTitle,
+  ServicesText,
+  ServicesSub,
+  CanvasContain,
+} from "./components/StyledElements/ServicesElements";
+import {
+  MethodsSection,
+  MethodTextContainer,
+  MethodTitle,
+  MethodText,
+  MethodSubtitle,
+  MandalaContainer,
+} from "./components/StyledElements/MethodsElements";
+import {
+  PackagesSection,
+  PackagesTextContainer,
+  PackagesSubtitle,
+  PackagesTitle,
+  PackagesText,
+  Modules,
+} from "./components/StyledElements/PackagesElements";
+import {
+  TeamSection,
+  TeamTextContainer,
+  TeamSubtitle,
+  TeamTitle,
+  TeamText,
+} from "./components/StyledElements/TeamElements";
+
+import modulesData from "./Data/packagesData";
+import servicesData from "./Data/servicesData";
+import CanvasBox from "./components/MainComponents/CanvasBox";
+import teamData from "./Data/teamData";
+
+import mandala from "./assets/mandala.png";
+import Model from "./components/MainComponents/Model";
+import TheTeam from "./components/MainComponents/TheTeam";
+import Footer from "./components/Footer";
+
+function App(props) {
+  const canvasBox = servicesData.map((feature) => {
+    return (
+      <CanvasBox
+        key={feature.id}
+        color={feature.color}
+        description={feature.description}
+        title={feature.title}
+      />
+    );
+  });
+
+  const modelData = modulesData.map((pack) => {
+    return (
+      <Model
+        key={pack.id}
+        description={pack.description}
+        title={pack.title}
+        subtitle={pack.subtitle}
+        img={pack.img}
+      />
+    );
+  });
+  const membersData = teamData.map((member) => {
+    return (
+      <TheTeam
+        key={member.id}
+        description={member.description}
+        title={member.title}
+        name={member.name}
+        img={member.img}
+      />
+    );
+  });
+
+  return (
+    <div>
+      <>
+        <Navbar />
+      </>
+      <Header>
+        <HeaderTitle>We are your one-stop-shop multi-disciplinary creative agency.</HeaderTitle>
+        <HeaderText>
+          Changes in the last year have created impacts that are rapidly affecting businesses &
+          individuals. Digital growth has become an essential strategy for the future.{" "}
+        </HeaderText>
+        <SupportContainer>
+          <SupportText>Find our how we can support you</SupportText>
+          <img style={{ marginLeft: "2em", width: "3em" }} src={Arrow} alt='' />
+        </SupportContainer>
+      </Header>
+      <ServicesSection>
+        <ServicesSub>OUR SERVICES</ServicesSub>
+        <ServicesTitle>WHAT WE DO</ServicesTitle>
+        <ServicesText>
+          Changes in the last year have created impacts that are rapidly affecting businesses &
+          individuals.
+        </ServicesText>
+        <CanvasContain>{canvasBox}</CanvasContain>
+      </ServicesSection>
+      <MethodsSection>
+        <MethodTextContainer>
+          <MethodSubtitle>OUR METHOD</MethodSubtitle>
+          <MethodTitle>HOW WE THINK</MethodTitle>
+          <MethodText>
+            Our 7-step process is curated to build timeless brands and concepts. It is intended to
+            identify the most urgent needs and optimized to deliver concepts quickly & efficiently.
+            The process starts with a comprehensive questionnaire that introduces the business and
+            potential opportunities.
+          </MethodText>
+        </MethodTextContainer>
+        <MandalaContainer>
+          <img width='100%' src={mandala} alt='' />
+        </MandalaContainer>
+      </MethodsSection>
+      <PackagesSection>
+        <PackagesTextContainer>
+          <PackagesSubtitle>OUR PACKAGES</PackagesSubtitle>
+          <PackagesTitle>THE MODULES</PackagesTitle>
+          <PackagesText>
+            Changes in the last year have created impacts that are rapidly affecting businesses &
+            individuals.
+          </PackagesText>
+        </PackagesTextContainer>
+        <Modules>{modelData}</Modules>
+      </PackagesSection>
+      <TeamSection>
+        <TeamTextContainer>
+          <TeamSubtitle>FOUNDERS & MANAGING DIRECTORS</TeamSubtitle>
+          <TeamTitle>THE TEAM</TeamTitle>
+          <TeamText>Our multidisciplinary team will</TeamText>
+        </TeamTextContainer>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>{membersData}</div>
+      </TeamSection>
+      <Footer />
+    </div>
+  );
+}
+
+
+
+
+export default App;
