@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png";
-import rainbow from "../assets/rainbow-bar.svg";
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
