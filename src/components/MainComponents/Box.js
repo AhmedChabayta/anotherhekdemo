@@ -2,8 +2,6 @@ import React from "react";
 
 import { RoundedBox } from "@react-three/drei";
 
-import { RoundedBox } from "@react-three/drei";
-
 import { useFrame } from "@react-three/fiber";
 
 export default function Box(props) {
