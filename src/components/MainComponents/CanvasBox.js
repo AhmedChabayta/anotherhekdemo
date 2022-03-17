@@ -45,7 +45,7 @@ const TextContainer = styled.div`
 `;
 const CardTitle = styled.h3`
   font-size: 5em;
-  font-weight: 300;
+  font-weight: 400;
   @media (max-width: 768px) {
     font-size: 8em;
   }
