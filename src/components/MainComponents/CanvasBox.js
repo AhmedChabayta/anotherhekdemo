@@ -35,16 +35,25 @@ const CardContainer = styled.div`
   
 `;
 const TextContainer = styled.div`
-  margin: 0 auto;
+  margin: 0 1em;
   text-align: center;
   justify-self: center;
+  max-width: 100%;
   color: white;
-  width: 100%;
   text-align: center;
+  text-justify: justify;
 `;
 const CardTitle = styled.h3`
-  font-size: 3em;
+  font-size: 5em;
+  font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 8em;
+  }
 `;
 const CardText = styled.p`
-  font-size: 2.5em;
+  font-size: 1.875em;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 6em;
+  }
 `;

@@ -8,29 +8,41 @@ export const ServicesSection = styled.div`
   margin: 0;
   padding-left: 4em;
   font-size: 16px;
+  padding-bottom: 15%;
 
   @media (max-width: 768px) {
     padding-left: 4em;
-    font-size: 6px;
+    font-size: 5px;
   }
 `;
 export const ServicesSub = styled.h4`
   color: #2bff88;
-  font-size: 2em;
-  margin-bottom: 0;
+  font-size: 1.25em;
+  margin: 0;
   font-weight: 300;
+  @media screen {
+   font-size: 4em;
+  }
 `;
 
 export const ServicesTitle = styled.h1`
-  margin-top: 0;
-  font-size: 6em;
+  margin: 0;
+  font-size: 5em;
   position: relative;
   font-weight: 400;
+  @media (max-width: 768px) {
+    font-size: 10em;
+  }
 `;
 export const ServicesText = styled.p`
-  font-size: 4em;
+  font-size: 2.5em;
   max-width: 90%;
   font-weight: 300;
+  text-justify: justify;
+  @media (max-width: 768px) {
+    font-size: 5em;
+    text-justify: justify;
+  }
 `;
 
 export const CanvasContain = styled.div`

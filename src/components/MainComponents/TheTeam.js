@@ -8,8 +8,8 @@ export default function TheTeam(member) {
         <img src={`/${member.img}.png`} alt='' />
       </ImageContainer>
       <TextContainer>
-        <Subtitle>{member.name}</Subtitle>
         <Title>{member.title}</Title>
+        <Name>{member.name}</Name>
         <Description>{member.description}</Description>
       </TextContainer>
     </Card>
@@ -18,13 +18,13 @@ export default function TheTeam(member) {
 const Card = styled.div`
   position: relative;
   display: flex;
-  margin: 0 auto;
-  font-size: 16px;
-  max-width: 100%;
-  width: 800px;
   flex-direction: column;
+  margin: 2em auto;
+  width: 800px;
+  font-size: 16px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
   @media (max-width: 768px) {
@@ -32,21 +32,35 @@ const Card = styled.div`
   }
 `;
 const ImageContainer = styled.div`
+position: relative;
+display: flex;
 
 `
 const TextContainer = styled.div`
-  text-align: center;
+display: flex;
+flex-direction: column;
+  align-items: center;
 `;
-const Subtitle = styled.h3`
-  font-size: 4em;
-  font-weight: 300;
-  margin-bottom: 0;
-`;
-const Title = styled.h1`
-  margin-top: 0;
-  font-size: 6em;
+const Title = styled.h4`
+  font-size: 1.5625em;
   font-weight: 400;
+  margin-bottom: 0;
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
+`;
+const Name = styled.h3`
+  font-size: 2.8125em;
+  font-weight: 300;
+  margin-top: 0;
+  @media (max-width: 768px) {
+    font-size: 6em;
+  }
 `;
 const Description = styled.p`
-  font-size: 4em;
+  font-size: 1.875em;
+  width: 50%;
+  @media (max-width: 768px) {
+    font-size: 4em;
+  }
 `;

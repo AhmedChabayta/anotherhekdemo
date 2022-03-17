@@ -1,13 +1,11 @@
-import Navbar from "./components/Navbar";
-import "./globals.css";
-import Arrow from "./assets/arrow.svg";
+// styles
 import {
   Header,
   HeaderTitle,
   HeaderText,
   SupportContainer,
   SupportText,
-} from "./components/StyledElements/HeaderElements.js";
+} from "./components/StyledElements/HeaderElements";
 import {
   ServicesSection,
   ServicesTitle,
@@ -38,16 +36,22 @@ import {
   TeamTitle,
   TeamText,
 } from "./components/StyledElements/TeamElements";
-
-import modulesData from "./Data/packagesData";
-import servicesData from "./Data/servicesData";
+// reusable components
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+// main ONLY components
 import CanvasBox from "./components/MainComponents/CanvasBox";
-import teamData from "./Data/teamData";
-
-import mandala from "./assets/mandala.png";
 import Model from "./components/MainComponents/Model";
 import TheTeam from "./components/MainComponents/TheTeam";
-import Footer from "./components/Footer";
+// css
+import "./globals.css";
+// images or assets
+import Arrow from "./assets/arrow.svg";
+import mandala from "./assets/mandala.png";
+// data
+import modulesData from "./Data/packagesData";
+import servicesData from "./Data/servicesData";
+import teamData from "./Data/teamData";
 
 function App(props) {
   const canvasBox = servicesData.map((feature) => {
@@ -97,7 +101,7 @@ function App(props) {
         </HeaderText>
         <SupportContainer>
           <SupportText>Find our how we can support you</SupportText>
-          <img style={{ marginLeft: "2em", width: "3em" }} src={Arrow} alt='' />
+          <img style={{ marginLeft: "1em", width: "1.5em" }} src={Arrow} alt='' />
         </SupportContainer>
       </Header>
       <ServicesSection>
@@ -147,8 +151,5 @@ function App(props) {
     </div>
   );
 }
-
-
-
 
 export default App;

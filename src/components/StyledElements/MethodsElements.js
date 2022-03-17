@@ -22,16 +22,25 @@ export const MethodTextContainer = styled.div`
 `;
 export const MethodSubtitle = styled.h4`
   font-size: 2em;
-  margin-bottom: 0;
+  margin: 0;
   font-weight: 300;
+  @media (max-width: 768px) {
+    font-size:4em;
+  }
 `;
 export const MethodTitle = styled.h1`
-  margin-top: 0;
+  margin: 0;
   font-size: 6em;
   font-weight: 400;
+  @media (max-width: 768px) {
+    font-size: 10em;
+  }
 `;
 export const MethodText = styled.p`
-  font-size: 4em;
+  font-size: 2.5em;
+  @media (max-width: 768px) {
+    font-size:5em
+  }
 `;
 export const MandalaContainer = styled.div`
   display: flex;

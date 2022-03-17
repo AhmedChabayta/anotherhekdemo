@@ -8,26 +8,35 @@ export const Header = styled.div`
   color: white;
   min-height: 100vh;
   font-size: 16px;
+  padding-bottom: 4em;
   @media (max-width: 768px) {
-    padding-left: 5em;
-    font-size: 6px;
+    padding-left: 3em;
+    font-size: 5px;
   }
 `;
 export const HeaderTitle = styled.h1`
-  font-size: 7.25em;
+font-weight:400;
+  font-size: 6.25em;
   text-justify: auto;
+  @media (max-width: 768px) {
+    font-size:10em;
+  }
 `;
 export const HeaderText = styled.p`
-  font-size: 4em;
-  width: 90%;
-  text-justify: auto;
+  font-size: 2.5em;
+  text-justify: justify;
+  max-width:90%;
+  font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 6em;
+    text-justify: justify;
+  }
 `;
 export const SupportContainer = styled.div`
   display: flex;
   max-width: 70%;
   cursor: pointer;
   @media (max-width: 768px) {
-    position: absolute;
     bottom: 10em;
   }
 `;

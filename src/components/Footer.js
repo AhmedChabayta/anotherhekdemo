@@ -21,14 +21,14 @@ export default function Footer() {
         </LogoContainer>
         <Columns>
           <Column1>
-            <li style={{ fontWeight: "bold", fontSize: "1.2rem" }}>Site</li>
+            <li style={{ fontWeight: "bold"}}>Site</li>
             <li>About</li>
             <li>Services</li>
             <li>Insights</li>
             <li>Contact</li>
           </Column1>
           <Column2>
-            <li style={{ fontWeight: "bold", fontSize: "1.2rem" }}>Resources</li>
+            <li style={{ fontWeight: "bold" }}>Resources</li>
             <li>On-baording</li>
             <li>Questionnaire</li>
             <li>Document #2</li>
@@ -58,7 +58,7 @@ const GreenContainer = styled.div`
   background-image: url(/dots-photo.svg);
   background-repeat: no-repeat;
   background-position: right bottom;
-  background-size: cover;
+  background-size: contain;
   @media (max-width: 768px) {
     background-image: none;
   }
@@ -68,11 +68,14 @@ const TextContainer = styled.div`
   flex-direction: column;
 `;
 const FootText = styled.h2`
-  font-size: 5em;
-  font-weight: 400;
+  font-size: 3.75em;
+  font-weight: 300;
   margin-left: 3.7rem;
   max-width: 70%;
+  text-justify: justify;
   @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 8em;
     max-width: 90%;
     margin-left: 2rem;
   }
@@ -83,8 +86,8 @@ const ContactButton = styled.button`
   height: 2em;
   width: 7em;
   padding: 0;
-  font-size: 2em;
-  border-radius: 15px;
+  font-size: 1.5rem;
+  border-radius: 20px;
   background-color: black;
   border: none;
   color: #2bff88;
@@ -152,25 +155,24 @@ const Columns = styled.div`
 const Column1 = styled.div`
   display: flex;
   flex-direction: column;
-
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.875em;
   text-align: left;
   > li {
     list-style-type: none;
-    margin: 1em;
+    margin: 0.5em;
     text-align: left;
   }
 `;
 const Column2 = styled.div`
-  font-size: 1rem;
+  font-size: 1.875em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
   > li {
     list-style-type: none;
-    margin: 1em;
+    margin: 0.5em;
     text-align: left;
   }
 `;

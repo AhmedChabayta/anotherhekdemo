@@ -17,7 +17,7 @@ const Card = styled.div`
   display: flex;
   margin: 0 auto;
   font-size: 16px;
-  max-width: 100%;
+  width: 800px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
@@ -33,18 +33,26 @@ const TextContainer = styled.div`
   align-items: center;
 `;
 const Subtitle = styled.h3`
-  font-size: 4em;
+  font-size: 1.5625em;
   font-weight: 300;
   margin-bottom: 0;
   justify-content: center;
+  @media (max-width: 768px) {
+    font-size:2.5em;
+  }
 `;
 const Title = styled.h1`
   margin-top: 0;
-  font-size: 6em;
+  font-size: 2.8125em;
   font-weight: 400;
-  
+  @media (max-width: 768px){
+    font-size: 6em;
+  }
 `;
 const Description = styled.p`
-  font-size: 4em;
-   margin-top: 0;
+  font-size: 1.875em;
+  margin-top: 0;
+  @media (max-width: 768px) {
+    font-size: 4em;
+  }
 `;

@@ -15,26 +15,31 @@ export const PackagesTextContainer = styled.div`
   flex-direction: column;
 `;
 export const PackagesSubtitle = styled.h4`
-  font-size: 2em;
+  font-size: 1.25em;
   color: #2bff88;
   margin-bottom: 0;
   font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 4em;
+  }
 `;
 export const PackagesTitle = styled.h1`
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 400;
-  margin-top: 0;
+  margin: 0;
+  @media (max-width: 768px) {
+    font-size:10em
+  }
 `;
 export const PackagesText = styled.p`
-  margin-top: 1em;
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: 300;
+  margin-bottom: 5vh;
+  @media (max-width: 768px) {
+    font-size:5em;
+  }
 `;
 export const Modules = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  justify-content: center;
-  align-items: center;
-  margin: auto auto;
-`;
+`
